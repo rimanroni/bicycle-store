@@ -1,10 +1,10 @@
 # Bicycle Store
-# Technologies Used 
- - ** Node.js:**
- - ** Express:**
- - ** MongoDB:**
- - ** Mongoose:**
- - ** TypeScript:**
+### Technologies Used 
+ -   Node.js 
+ -   Express 
+ -   MongoDB 
+ -   Mongoose 
+ -   TypeScript 
 
 ## Description
 A Node.js-based backend application that manages a bicycle store. It allows for features such   product management, and order processing.
@@ -54,15 +54,29 @@ A Node.js-based backend application that manages a bicycle store. It allows for 
 
 
 ### 5. Update Bicycle
+ 
 - **Endpoint: PUT /api/bicycle/:productsId**
 - **Description: Updates the details of a bicycle by its ID:**
-- **Request Body:**
- ```json 
-{
-  "name": "Updated Bicycle Name",
-  "price": 350,
-  "quantity": 5
-  } 
+
+### Calculate Revenue 
+ - Endpoint: GET /api/order/revenue
+ - Description: Calculates the total revenue from all orders.
+ - Logic .
+ - Aggregates the total price of all orders multiplied by the quantity ordered.
+ - Groups the results to calculate the total revenue
+ 
+###  Explanation of Code Logic:
+
+1. **Create Order:**
+   - The controller receives `email`, `product`, `quantity`, and `totalPrice` from the request body.
+   - It checks if the product exists and if there is enough stock.
+   - If the stock is sufficient, the quantity is deducted, and the product's `inStock` status is updated.
+   - A new order is created and saved to the database.
+
+2. **Revenue Calculation:**
+   - It uses MongoDB's aggregation framework to calculate total revenue from all orders by multiplying `totalPrice` and `quantity`.
+   - The result is grouped and the total revenue is calculated and returned.
+  
 
 
 
