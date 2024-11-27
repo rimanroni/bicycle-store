@@ -1,8 +1,8 @@
-import mongoose, { Schema,   } from "mongoose";
+import mongoose, { model, Schema,   } from "mongoose";
 import { OrderType } from "./order.interface";
 import bicycleModel from "../Bicycle/bicycle.model";
 
-const OrderSchema = new Schema<OrderType>({
+export const OrderSchema = new Schema<OrderType>({
      email : {
         type : String,
         required:[true, 'email required '] ,
@@ -14,8 +14,20 @@ const OrderSchema = new Schema<OrderType>({
         required : true
      }, 
      quantity : {
-        type
-     }
+        type : Number, 
+        required : true, 
+      }, 
+      totalPrice : {
+        type : Number, 
+        required : true
+      }
 },{
     timestamps : true
 })
+
+
+
+const orderModel = model('order', OrderSchema);
+
+export default orderModel;
+
