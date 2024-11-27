@@ -1,7 +1,13 @@
 # Bicycle Store
+# Technologies Used 
+ - ** Node.js:**
+ - ** Express:**
+ - ** MongoDB:**
+ - ** Mongoose:**
+ - ** TypeScript:**
 
 ## Description
-A Node.js-based backend application that manages a bicycle store. It allows for features such as user authentication, product management, and order processing.
+A Node.js-based backend application that manages a bicycle store. It allows for features such   product management, and order processing.
 
 ## Features
  - **Product Management:** List and manage bicycles available for sale.
@@ -40,20 +46,23 @@ A Node.js-based backend application that manages a bicycle store. It allows for 
  ### 3. **Get Single Bicycle**
 - **Endpoint: GET /api/bicycle/:productsId
 - ** Description: Retrieves details of a single bicycle by its ID.
-
-### 4. Update Bicycle
-- **Endpoint: PUT /api/bicycle/:productsId**
-- **Description: Updates the details of a bicycle by its ID:**
-- **Request Body:**
- ```json 
- {
-  "name": "Updated Bicycle Name",
-  "price": 350,
-  "quantity": 5
-};
- 
-### 5. **Delete Bicycle**
+### 4. **Delete Bicycle**
 - **Endpoint:** `DELETE /api/bicycle/:productsId`
 - **Description:** Deletes a bicycle by its ID.
 - **Parameters:** 
   - `productsId` (path parameter): The ID of the bicycle to delete.
+
+
+### 5. Update Bicycle
+- **Endpoint: PUT /api/bicycle/:productsId**
+- **Description: Updates the details of a bicycle by its ID:**
+- **Request Body:**
+ ```json 
+{
+  "name": "Updated Bicycle Name",
+  "price": 350,
+  "quantity": 5
+  } 
+
+
+
