@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import bicycleModel from "../Bicycle/bicycle.model";
 import { orderService } from "./order.service";
 import orderModel from "./order.model";
- 
+
  
 
  const orderController = async (req:Request, res:Response)  =>{
